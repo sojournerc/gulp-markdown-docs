@@ -1,0 +1,31 @@
+{
+  "name": "gulp-markdown-docs",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "sojournerc/gulp-markdown-docs",
+  "author": {
+    "name": "Christopher Meyer",
+    "email": "cm@wayin.com",
+    "url": "https://github.com/sojournerc"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.0",
+    "through2": "^0.6.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
