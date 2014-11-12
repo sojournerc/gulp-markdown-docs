@@ -1,7 +1,16 @@
 
 body {
-  padding-left: 20em;
+  margin-left: 20em;
+  font-family: sans-serif;
 }
+
+pre {
+  background-color: #EAEBEC;
+  color: #313131;
+  padding: 1em;
+  margin: 0;
+}
+
 .doc-nav {
   position: fixed;
   width: 20em;
