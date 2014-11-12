@@ -15,19 +15,18 @@ var gulp = require('gulp');
 var markdownDocs = require('gulp-markdown-docs');
 
 gulp.task('default', function () {
-	return gulp.src('docs/*.md')
-		.pipe(markdownDocs('index.html', {
-      ... options ...
-    }))
-		.pipe(gulp.dest('./documentation/'));
+  return gulp.src('docs/*.md')
+	.pipe(markdownDocs('index.html', {
+    ... options ...
+  }))
+	.pipe(gulp.dest('./documentation/'));
 });
 ```
 
-## API
 
-### markdownDocs(options)
+### OPTIONS (defaults shown)
 
-#### meta information
+#### Meta Information
 
     yamlMeta: true
 
