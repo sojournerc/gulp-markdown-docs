@@ -22,8 +22,13 @@
     "gulpplugin"
   ],
   "dependencies": {
+    "cheerio": "^0.18.0",
     "gulp-util": "^3.0.0",
-    "through2": "^0.6.1"
+    "highlight.js": "^8.3.0",
+    "js-yaml": "^3.2.3",
+    "lodash": "^2.4.1",
+    "marked": "^0.3.2",
+    "through": "^2.3.4"
   },
   "devDependencies": {
     "mocha": "*"

@@ -1,0 +1,29 @@
+
+body {
+  padding-left: 20em;
+}
+.doc-nav {
+  position: fixed;
+  width: 20em;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.doc-nav-list {
+  list-style: none;
+}
+
+.doc-nav-item {
+  padding: 0.5em 0;
+}
+.doc-article {
+  padding-bottom: 4em;
+  display: block;
+}
+.doc-article + .doc-article {
+  padding-top: 3em;
+  border-top: 1px solid #323232;
+}
