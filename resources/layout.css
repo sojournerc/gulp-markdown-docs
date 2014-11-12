@@ -5,8 +5,9 @@ body {
 }
 
 pre {
-  background-color: #EAEBEC;
-  color: #313131;
+  /* matches solarized_dark */
+  background: #002b36;
+  color: #839496;
   padding: 1em;
   margin: 0;
 }

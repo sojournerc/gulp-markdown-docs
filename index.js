@@ -19,7 +19,7 @@ function gulpMarkdownDocs(fileOpt, opt) {
 		stylesheetUrl: '',
 		layoutStylesheetUrl: __dirname + '/resources/layout.css',
 		templatePath: __dirname + '/resources/index.html',
-		highlightTheme: 'googlecode', // see /node_modules/highlight.js/styles
+		highlightTheme: 'solarized_dark', // see /node_modules/highlight.js/styles
 		markdown: {
 			highlight: function (code) {
 		    return highlight.highlightAuto(code).value;
@@ -71,7 +71,6 @@ function gulpMarkdownDocs(fileOpt, opt) {
 	function appendToDoc(meta, html) {
 		var anchor = '';
 		if (yaml) {
-			console.log(meta);
 			anchor += '<a name="'+meta.id+'"></a>';
 			$('.doc-nav-list').append(
 				'<li class="doc-nav-item">'+
