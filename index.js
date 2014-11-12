@@ -61,7 +61,7 @@ function gulpMarkdownDocs(fileOpt, opt) {
 	    throw new PluginError('gulp-markdown-docs', 'Missing path in file options for gulp-markdown-docs');
 	  }
 	  fileOpt = path.basename(fileOpt.path);
-	  // firstFile = new File(fileOpt);
+	  firstFile = new File(fileOpt);
 	}
 
 	function parseMarkdown(contents) {
