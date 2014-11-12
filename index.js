@@ -17,8 +17,8 @@ function gulpMarkdownDocs(fileOpt, opt) {
 	var DEFAULTS = {
 		yamlMeta: true,
 		stylesheetUrl: '',
-		layoutStylesheetUrl: __dirname + '/lib/layout.css',
-		templatePath: __dirname + '/lib/index.html',
+		layoutStylesheetUrl: __dirname + '/resources/layout.css',
+		templatePath: __dirname + '/resources/index.html',
 		highlightTheme: 'googlecode', // see /node_modules/highlight.js/styles
 		markdown: {
 			highlight: function (code) {
