@@ -32,9 +32,9 @@ gulp.task('default', function () {
 
 *Required* in order to construct the navigation menu. When set to true, each document given to gulp-markdown-docs should have a YAML header providing needed information about the document.
 
-```markdown
+```md
 ---
-label: Label for Nav
+label: Nav Label
 id: unique_slug
 
 # Your Content

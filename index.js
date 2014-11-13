@@ -50,11 +50,12 @@ function gulpMarkdownDocs(fileOpt, opt) {
 	// place css resources
 	var $ = cheerio.load(docHtml);
 	var $head = $('head');
+	$head.append('<style>'+highlightCss+'</style>');
+	if (layoutCss) { $head.append('<style>'+layoutCss+'</style>'); }
+	// add the custom style sheet last for sensible overrides
 	if (options.stylesheetUrl) { 
 		$head.append('<link rel="stylesheet" type="text/css" href="'+options.stylesheetUrl+'">'); 
 	}
-	$head.append('<style>'+highlightCss+'</style>');
-	if (layoutCss) { $head.append('<style>'+layoutCss+'</style>'); }
 
 	if (typeof fileOpt !== 'string') {
 	  if (typeof fileOpt.path !== 'string') {
@@ -71,7 +72,7 @@ function gulpMarkdownDocs(fileOpt, opt) {
 	function appendToDoc(meta, html) {
 		var anchor = '';
 		if (yaml) {
-			anchor += '<a name="'+meta.id+'"></a>';
+			anchor += '<a class="doc-nav-anchor" name="'+meta.id+'"></a>';
 			$('.doc-nav-list').append(
 				'<li class="doc-nav-item">'+
 					'<a href="#'+meta.id+'">'+meta.label+'</a>'+
