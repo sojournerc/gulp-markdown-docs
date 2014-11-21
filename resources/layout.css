@@ -1,37 +1,69 @@
-
 body {
-  margin-left: 20em;
+  margin-left: 35vw;
   font-family: sans-serif;
 }
-
 pre {
   /* matches solarized_dark */
   background: #002b36;
   color: #839496;
   padding: 1em;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-
 .doc-nav {
   position: fixed;
-  width: 20em;
+  width: 32vw;
   left: 0;
   top: 0;
   bottom: 0;
   overflow-x: hidden;
   overflow-y: auto;
-}
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 
-.doc-nav-list {
+}
+.doc-nav a {
+  text-decoration: none;
+}
+.doc-nav a:hover {
+  text-decoration: underline;
+}
+.doc-nav-group {
   list-style: none;
+  padding: 0;
 }
-
-.doc-nav-item {
+.doc-nav-group-header {
+  display: block;
   padding: 0.5em 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.doc-nav-group-header,
+.doc-nav-group-header a:active,
+.doc-nav-group-header a:visited {
+  color: #212121;
+}
+.doc-nav-item {
+  padding: 0.5em 0 0.5em 1.5em;
+}
+.doc-nav-item a:active,
+.doc-nav-item a:visited {
+  color: #454545;
+}
+.doc-section-header {
+  font-size: 1.7em;
+  border-bottom: 1px solid #839496;
+  padding-bottom: 0.5em;
 }
 .doc-article {
   padding-bottom: 4em;
   display: block;
+}
+.doc-article h1 {
+  font-size: 1.6em;
 }
 .doc-article + .doc-article {
   padding-top: 3em;

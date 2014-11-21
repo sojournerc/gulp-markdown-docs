@@ -1,6 +1,6 @@
 {
   "name": "gulp-markdown-docs",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "",
   "license": "MIT",
   "repository": "sojournerc/gulp-markdown-docs",
@@ -32,6 +32,8 @@
     "through": "^2.3.4"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "should": "*",
+    "stream-assert": "^2.0.1"
   }
 }

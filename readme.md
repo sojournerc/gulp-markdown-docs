@@ -36,10 +36,24 @@ gulp.task('default', function () {
 ---
 label: Nav Label
 id: unique_slug
+categorySlug:
+categoryLabel: 
+categoryRank: 
+documentRank: 
 
 # Your Content
 ...
 ```
+
+#### Sorting (`yamlMeta` must be true)
+If you wanted a document or category to always be at the end you could set this to 10000, or beginning -10000.
+
+All sorting is done on a last-in basis, so the last rank seen is the value used for the category
+
+**NOTE**  slugs/ids need to be unique between categories and documents TODO: !!
+
+    categorySort: 'alphabetical', // 'alphabetical' || 'rank' 
+    documentSort: 'alphabetical', // 'alphabetical' || 'rank'
 
 #### External Stylesheet
 
@@ -57,7 +71,8 @@ gulp-markdown-docs includes a simple layout by default. `false` will prevent it 
 
     templatePath: __dirname + '/resources/index.html'
 
-gulp-markdown-docs includes a simple HTML document by default. Passing a path to a different HTML file allows you to customize the resulting documentation page. This module looks for `<head>...</head>` to add stylesheets to, and `.doc-nav-list` and `doc-content` to append the navigation items and documentation articles to respectively. 
+gulp-markdown-docs includes a simple HTML document by default. Passing a path to a different HTML file allows you to customize the resulting documentation page. 
+**NOTE** This module looks for `<head>...</head>` to add stylesheets to, and `.doc-nav` and `.doc-content` to append the navigation items and documentation respectively. 
 
 #### Highlight theme 
     

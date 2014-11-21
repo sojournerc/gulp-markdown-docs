@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gulp Markdown Docs</title>
+  <style>/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #002b36;
+  color: #839496;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-doctype,
+.hljs-pi,
+.lisp .hljs-string,
+.hljs-javadoc {
+  color: #586e75;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-winutils,
+.method,
+.hljs-addition,
+.css .hljs-tag,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-command,
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-rules .hljs-value,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.tex .hljs-formula,
+.hljs-regexp,
+.hljs-hexcolor,
+.hljs-link_url {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-localvars,
+.hljs-chunk,
+.hljs-decorator,
+.hljs-built_in,
+.hljs-identifier,
+.vhdl .hljs-literal,
+.hljs-id,
+.css .hljs-function {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body,
+.smalltalk .hljs-number,
+.hljs-constant,
+.hljs-class .hljs-title,
+.hljs-parent,
+.hljs-type,
+.hljs-link_reference {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-preprocessor,
+.hljs-preprocessor .hljs-keyword,
+.hljs-pragma,
+.hljs-shebang,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.diff .hljs-change,
+.hljs-special,
+.hljs-attr_selector,
+.hljs-subst,
+.hljs-cdata,
+.css .hljs-pseudo,
+.hljs-header {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-deletion,
+.hljs-important {
+  color: #dc322f;
+}
+
+/* Solarized Violet */
+.hljs-link_label {
+  color: #6c71c4;
+}
+
+.tex .hljs-formula {
+  background: #073642;
+}
+</style><style>body {
+  margin-left: 35vw;
+  font-family: sans-serif;
+}
+pre {
+  /* matches solarized_dark */
+  background: #002b36;
+  color: #839496;
+  padding: 1em;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.doc-nav {
+  position: fixed;
+  width: 32vw;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+}
+.doc-nav a {
+  text-decoration: none;
+}
+.doc-nav a:hover {
+  text-decoration: underline;
+}
+.doc-nav-group {
+  list-style: none;
+  padding: 0;
+}
+.doc-nav-group-header {
+  display: block;
+  padding: 0.5em 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.doc-nav-group-header,
+.doc-nav-group-header a:active,
+.doc-nav-group-header a:visited {
+  color: #212121;
+}
+.doc-nav-item {
+  padding: 0.5em 0 0.5em 1.5em;
+}
+.doc-nav-item a:active,
+.doc-nav-item a:visited {
+  color: #454545;
+}
+.doc-section-header {
+  font-size: 1.7em;
+  border-bottom: 1px solid #839496;
+  padding-bottom: 0.5em;
+}
+.doc-article {
+  padding-bottom: 4em;
+  display: block;
+}
+.doc-article h1 {
+  font-size: 1.6em;
+}
+.doc-article + .doc-article {
+  padding-top: 3em;
+  border-top: 1px solid #323232;
+}</style></head>
+  <body>
+    <section class="doc-nav"><ul class="doc-nav-group"><li class="doc-nav-item"><a href="#file1">File1</a></li></ul></section>
+    <section class="doc-content"><section class="doc-section"><article class="doc-article"><a class="doc-nav-anchor" name="file1"></a><h1 id="header">HEADER</h1>
+<p>Body text</p>
+</article></section></section>
+  </body>
+
