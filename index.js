@@ -132,7 +132,9 @@ function gulpMarkdownDocs(fileOpt, opt) {
 		categories = _.sortBy(categories, (options.categorySort === 'rank' ? 'categoryRank' : 'categoryLabel'));
 		// sort docs
 		categories.forEach(function (category) {
-			category.children = _.sortBy(category.children, (options.documentSort === 'rank' ? 'documentRank' : 'documentLabel'));
+			category.children = _.sortBy(category.children, function (child) {
+				return options.documentSort === 'rank' ? child.meta.documentRank : child.meta.documentLabel
+			});
 		});
 		return categories;
 	}
