@@ -51,7 +51,6 @@ describe('gulp-markdown-docs', function() {
         });
     });
 
-        // .pipe(gulp.dest('./test/expect/'))
     it('should parse multiple files', function (done) {
       gulp.src(fixtures('*-orphan.md'))
         .pipe(gulpMarkdown('multiple.html'))
@@ -61,6 +60,7 @@ describe('gulp-markdown-docs', function() {
         });
     })
 
+    // TODO: 
     // it('should sort category alphabetically', function (done) {
     // });
 
