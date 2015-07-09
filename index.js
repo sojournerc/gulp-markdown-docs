@@ -47,7 +47,7 @@ function gulpMarkdownDocs(fileOpt, opt) {
 	
 	// gather needed resources
 	var indexHtml = fs.readFileSync(options.templatePath);
-	var highlightCss = fs.readFileSync(__dirname + '/node_modules/highlight.js/styles/'+options.highlightTheme+'.css');
+	var highlightCss = fs.readFileSync(require.resolve('highlight.js/styles/'+options.highlightTheme+'.css'));
 	var layoutCss = options.layoutStylesheetUrl && fs.readFileSync(options.layoutStylesheetUrl);
 
 	// place css resources
