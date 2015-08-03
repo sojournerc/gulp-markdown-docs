@@ -1,6 +1,6 @@
 {
   "name": "gulp-markdown-docs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
   "license": "MIT",
   "repository": "sojournerc/gulp-markdown-docs",
@@ -23,7 +23,7 @@
     "gulpplugin"
   ],
   "dependencies": {
-    "cheerio": "^0.18.0",
+    "cheerio": "^0.19.0",
     "gulp-util": "^3.0.0",
     "highlight.js": "^8.3.0",
     "js-yaml": "^3.2.3",
