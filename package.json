@@ -1,6 +1,6 @@
 {
   "name": "gulp-markdown-docs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "",
   "license": "MIT",
   "repository": "sojournerc/gulp-markdown-docs",
@@ -27,7 +27,7 @@
     "gulp-util": "^3.0.0",
     "highlight.js": "^8.3.0",
     "js-yaml": "^3.2.3",
-    "lodash": "^2.4.1",
+    "lodash": "^3.10.0",
     "marked": "^0.3.2",
     "through": "^2.3.4"
   },
