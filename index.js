@@ -9,6 +9,7 @@ var PluginError = gutil.PluginError;
 var fs = require('fs');
 var File = gutil.File;
 var highlight = require('highlight.js');
+var yamlFrontMatter = require('yaml-front-matter');
 
 function gulpMarkdownDocs(fileOpt, opt) {
 	if (!fileOpt) throw new PluginError('gulp-markdown-docs', 'Missing file argument for gulp-markdown-docs');
@@ -148,15 +149,17 @@ function gulpMarkdownDocs(fileOpt, opt) {
 		if (!firstFile) firstFile = file;
 		try {
 			if (options.yamlMeta) {
-				var split_text = file.contents.toString().split(/\n\n/);
-				markdown = split_text.splice(1, split_text.length-1).join('\n\n');
+
+				var parsedFile = yamlFrontMatter.loadFront(file.contents.toString(), 'markdownContent');
+				console.log(parsedFile.markdownContent);
+
 				collectedDocs.push({
-					meta:yaml.safeLoad(split_text[0]),
-					html:parseMarkdown(markdown)
+					meta: parsedFile,
+					html: parseMarkdown(parsedFile.markdownContent)
 				});
 			} else {
 				collectedDocs.push({
-					html: parseMarkdown(file.contents.toString())
+					html: parseMarkdown(parsedFile.markdownContent)
 				});
 			}
 		} catch (err) {

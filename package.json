@@ -29,9 +29,11 @@
     "js-yaml": "^3.2.3",
     "lodash": "^3.10.0",
     "marked": "^0.3.2",
-    "through": "^2.3.4"
+    "through": "^2.3.4",
+    "yaml-front-matter": "^3.4.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "mocha": "*",
     "should": "*",
     "stream-assert": "^2.0.1"
