@@ -148,18 +148,19 @@ function gulpMarkdownDocs(fileOpt, opt) {
 		var markdown, meta, html;
 		if (!firstFile) firstFile = file;
 		try {
+			var parsedFile = yamlFrontMatter.loadFront(file.contents.toString());
+			var markdown = parsedFile['__content'];
+			delete parsedFile['__content'];
+			var metadata = parsedFile;
+
 			if (options.yamlMeta) {
-
-				var parsedFile = yamlFrontMatter.loadFront(file.contents.toString(), 'markdownContent');
-				console.log(parsedFile.markdownContent);
-
 				collectedDocs.push({
-					meta: parsedFile,
-					html: parseMarkdown(parsedFile.markdownContent)
+					meta: metadata,
+					html: parseMarkdown(markdown)
 				});
 			} else {
 				collectedDocs.push({
-					html: parseMarkdown(parsedFile.markdownContent)
+					html: parseMarkdown(markdown)
 				});
 			}
 		} catch (err) {
