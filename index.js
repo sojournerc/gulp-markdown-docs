@@ -94,7 +94,7 @@ function gulpMarkdownDocs(fileOpt, opt) {
 
 			category.children.forEach(function (doc) {
 				var anchor = '';
-				if (doc.meta) {
+				if (doc.meta && !_.isEmpty(doc.meta)) {
 					anchor += '<a class="doc-nav-anchor" name="' + doc.meta.id + '"></a>';
 					$navGroup.append(
 						'<li class="doc-nav-item">' +

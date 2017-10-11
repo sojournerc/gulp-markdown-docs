@@ -42,7 +42,7 @@ describe('gulp-markdown-docs', function() {
         });
     });
 
-    it.only('should parse one file', function(done) {
+    it('should parse one file', function(done) {
       gulp.src(fixtures('file1-orphan.md'))
         .pipe(gulpMarkdown('file1.html'))
         .on('data', function (d) {
