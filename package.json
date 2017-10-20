@@ -1,6 +1,6 @@
 {
   "name": "gulp-markdown-docs",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "description": "",
   "license": "MIT",
   "repository": "sojournerc/gulp-markdown-docs",
@@ -26,12 +26,14 @@
     "cheerio": "^0.19.0",
     "gulp-util": "^3.0.0",
     "highlight.js": "^8.3.0",
-    "js-yaml": "^3.2.3",
+    "js-yaml": "^3.5.2",
     "lodash": "^3.10.0",
     "marked": "^0.3.2",
-    "through": "^2.3.4"
+    "through": "^2.3.4",
+    "yaml-front-matter": "^3.4.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "mocha": "*",
     "should": "*",
     "stream-assert": "^2.0.1"

@@ -60,7 +60,7 @@ describe('gulp-markdown-docs', function() {
         });
     })
 
-    // TODO: 
+    // TODO:
     // it('should sort category alphabetically', function (done) {
     // });
 
@@ -72,7 +72,7 @@ describe('gulp-markdown-docs', function() {
 
     // it('should sort documents by rank', function (done) {
     // });
-    
+
     // it('should load external stylesheet', function (done) {
     // });
 
